@@ -1,0 +1,281 @@
+body {
+  background-color: #f0f0f0;
+  font-family: "Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+.reverse-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+nav {
+  padding: 2rem 0;
+}
+
+.nav-visible {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+#menu {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+  padding: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+#menu li {
+  display: none;
+}
+
+#menu li:first-child {
+  display: block;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.visible {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#menu li a {
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#menu li a:hover {
+  text-decoration: underline;
+}
+
+#logo-container {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 5rem;
+}
+
+#logo-container img {
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.main-picture {
+  display: none;
+}
+
+.content {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0 0 0.625rem 0.625rem;
+  box-sizing: border-box;
+}
+.card .content {
+  position: relative;
+}
+
+.card .content-container {
+  display: none;
+  margin: 3rem 0;
+}
+
+h1 {
+  font-size: 1.625rem;
+  line-height: 1.875rem;
+  margin: 0;
+  font-weight: 650;
+}
+h2 {
+  font-size: 0.725rem;
+  line-height: 1.875rem;
+  margin: 1.5rem 0 0 0;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+}
+p {
+  color: #a1a1a1;
+  font-size: 0.725rem;
+  line-height: 1.3rem;
+  margin: 1rem 0 1.5rem 0;
+}
+.about p {
+  margin-top: 0.25rem;
+}
+.content a {
+  color: #000000;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  letter-spacing: 0.5rem;
+  text-decoration: none;
+  display: block;
+}
+.content a::after {
+  content: url(images/icon-arrow.svg);
+  position: absolute;
+  padding: 0 0 0 2rem;
+}
+.content a:hover {
+  opacity: 0.5;
+}
+
+.arrow {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.857rem;
+  top: -2.6rem;
+  padding: 0.875rem 1.125rem;
+  background-color: #000000;
+  cursor: pointer;
+}
+.arrow:hover {
+  background-color: #a1a1a1;
+}
+.arrow-left {
+  right: 2.75rem;
+}
+.arrow-right {
+  right: 0;
+}
+
+@media (width >= 64rem) {
+  main {
+    max-width: 64rem;
+    box-shadow: 1rem 1rem 1.5rem #dddddd;
+  }
+  header {
+    width: 60%;
+  }
+
+  .reverse-container {
+    width: 60%;
+    flex-direction: row-reverse;
+  }
+
+  #menu li {
+    display: block;
+  }
+
+  #menu li:first-child {
+    display: none;
+  }
+
+  #menu li a {
+    color: #ffffff;
+    font-size: 0.6rem;
+    font-weight: 500;
+  }
+
+  nav {
+    flex-grow: 1;
+    padding: 1rem 0;
+  }
+
+  .nav-visible {
+    width: initial;
+    background-color: transparent;
+  }
+
+  #menu {
+    margin-left: 0;
+  }
+
+  #logo-container {
+    flex-grow: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  #logo-container.hidden {
+    display: initial !important;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+  .card .image-container {
+    flex-basis: 60%;
+  }
+  .card .content {
+    flex-basis: 40%;
+    padding: 4rem 4rem 0 4rem;
+  }
+
+  .card .content-container {
+    margin: 1rem 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    color: #a1a1a1;
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+  .content a {
+    font-size: 0.5rem;
+  }
+
+  .arrow {
+    bottom: 0;
+    top: initial;
+  }
+  .arrow-left {
+    right: initial;
+    left: 0;
+  }
+  .arrow-right {
+    right: initial;
+    left: 2.75rem;
+  }
+
+  .about .image-container {
+    flex-basis: 27%;
+  }
+  .about .content {
+    flex-basis: 46%;
+    padding: 2rem 2rem 0 2rem;
+  }
+  .about h2 {
+    margin-top: 0rem;
+    font-size: 0.6rem;
+  }
+  .about p {
+    font-size: 0.6rem;
+    line-height: 1rem;
+    margin-top: 0;
+  }
+}
